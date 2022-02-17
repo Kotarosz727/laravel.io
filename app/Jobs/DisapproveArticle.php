@@ -11,11 +11,9 @@ final class DisapproveArticle
     ) {
     }
 
-    public function handle(): Article
+    public function handle(): void
     {
         $this->article->approved_at = null;
         $this->article->save();
-
-        return $this->article;
     }
 }
